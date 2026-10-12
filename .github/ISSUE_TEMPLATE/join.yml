@@ -1,0 +1,32 @@
+name: Join Lumenforge AI
+description: Request membership. Low threshold, no sponsor required.
+title: "Join Lumenforge AI"
+labels: ["membership"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us who you are. An owner will send a GitHub invite if the request looks genuine.
+  - type: input
+    id: username
+    attributes:
+      label: GitHub username
+      description: Without the @ sign.
+      placeholder: octocat
+    validations:
+      required: true
+  - type: textarea
+    id: intro
+    attributes:
+      label: One-line introduction
+      description: What you want to build or learn here.
+      placeholder: I want to experiment with small applied AI tools.
+    validations:
+      required: true
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Agreement
+      options:
+        - label: I will be respectful in issues and pull requests.
+          required: true
